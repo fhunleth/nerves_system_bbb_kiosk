@@ -1,4 +1,4 @@
-defmodule NervesSystemBbb.Mixfile do
+defmodule NervesSystemBbbKiosk.Mixfile do
   use Mix.Project
 
   @version Path.join(__DIR__, "VERSION")
@@ -6,13 +6,13 @@ defmodule NervesSystemBbb.Mixfile do
     |> String.strip
 
   def project do
-    [app: :nerves_system_bbb,
+    [app: :nerves_system_bbb_kiosk,
      version: @version,
      elixir: "~> 1.2",
-     compilers: Mix.compilers ++ [:nerves_system],
-     description: description,
-     package: package,
-     deps: deps]
+     compilers: Mix.compilers ++ [:nerves_package],
+     description: description(),
+     package: package(),
+     deps: deps()]
   end
 
   def application do
@@ -20,9 +20,9 @@ defmodule NervesSystemBbb.Mixfile do
   end
 
   defp deps do
-    [{:nerves_system, "~> 0.1.5"},
-     {:nerves_system_br, "~> 0.7.0"},
-     {:nerves_toolchain_arm_unknown_linux_gnueabihf, "~> 0.7.0"}]
+    [{:nerves, "~> 0.4.0-rc.0"},
+     {:nerves_system_br, "~> 0.8.0"},
+     {:nerves_toolchain_arm_unknown_linux_gnueabihf, "~> 0.8.0-rc.0"}]
   end
 
   defp description do
