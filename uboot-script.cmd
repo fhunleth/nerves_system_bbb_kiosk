@@ -23,7 +23,7 @@ echo "Running Nerves U-Boot script"
 # kernel debug messages, put this in a uEnv.txt:
 #   optargs="bone_capemgr.disable_partno=BB-BONELT-HDMI,BB-BONELT-HDMIN"
 
-env set optargs "quiet bone_capemgr.disable_partno=BB-BONELT-HDMI,BB-BONELT-HDMIN"
+env set optargs "bone_capemgr.disable_partno=BB-BONELT-HDMI,BB-BONELT-HDMIN"
 
 # Allow the user to override the kernel/erlinit arguments
 # via a "uEnv.txt" file in the FAT partition.
@@ -38,6 +38,9 @@ if load mmc ${mmcdev}:1 ${loadaddr} uEnv.txt; then
     fi
 fi
 
+# Fix default u-boot console that specifies ttyO0
+setenv console ttyS0,115200n8
+
 # Determine the boot arguments
 #
 # Note the root filesystem specification. In Linux, /dev/mmcblk0 is always
@@ -51,6 +54,7 @@ setenv bootargs console=${console} ${optargs} root=/dev/mmcblk0p2 rootfstype=squ
 load mmc ${mmcdev}:1 ${loadaddr} zImage
 
 # Load the DT. On the BBB, fdtfile=am335x-boneblack.dtb
+setenv fdtfile am335x-boneblack-bbb-exp-c.dtb
 load mmc ${mmcdev}:1 ${fdtaddr} ${fdtfile}
 
 # Boot!!

@@ -1,9 +1,7 @@
-# BeagleBone Black
+# BeagleBone Black - Kiosk image
 
-[![Build Status](https://travis-ci.org/nerves-project/nerves_system_bbb.png?branch=master)](https://travis-ci.org/nerves-project/nerves_system_bbb)
-
-This is the base Nerves System configuration for the [BeagleBone Black](http://beagleboard.org/black). It
-also works on the [BeagleBone Green](http://beagleboard.org/green).
+This is Nerves System configuration for running the [BeagleBone Black](http://beagleboard.org/black)
+as a kiosk. It also works on the [BeagleBone Green](http://beagleboard.org/green).
 
 ![BeagleBone Black image](assets/images/beaglebone-black.png)
 <br><sup>[Image credit](#fritzing)</sup>
