@@ -21,6 +21,25 @@ as a kiosk. It also works on the [BeagleBone Green](http://beagleboard.org/green
 | Ethernet             | Yes    |
 | WiFi                 | Requires USB WiFi dongle        |
 
+## Kiosk updates!!!
+
+Currently this image is being tested on a Chipsee 7" LCD, so if you're running
+off HDMI, things might be different.
+
+### Test out OpenGLES
+
+The SGX drivers need to be loaded and initialized before you can use the 3D
+accelerator.
+
+```
+(demo@nerves-0000)1> os:cmd("modprobe omapdrm_pvr").
+[]
+(demo@nerves-0000)2> os:cmd("pvrsrvinit").
+[]
+(demo@nerves-0000)3> os:cmd("OGLES2ChameleonMan").
+```
+
+
 ## Preparing your BeagleBone
 
 The BeagleBone hardware is configured to always try the
