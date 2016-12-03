@@ -11,6 +11,9 @@ config pkg, :nerves_env,
   type: :system,
   version: version,
   compiler: :nerves_package,
+  provider_config: [
+    docker: {"Dockerfile", "#{pkg}:#{version}"}
+  ],
   artifact_url: [],
   platform: Nerves.System.BR,
   platform_config: [
