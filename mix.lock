@@ -1,5 +1,5 @@
-%{"distillery": {:hex, :distillery, "1.0.0", "a866a72bf2a3a5f078f5a249017ed951acda88a760d200512f91f585d74db1ec", [:mix], []},
-  "nerves": {:hex, :nerves, "0.4.5", "1a82415b7b60fef675a50be85ba8c37b13713d45a47acdded64e6e28ea9309a5", [:mix], [{:distillery, "~> 1.0.0", [hex: :distillery, optional: false]}]},
-  "nerves_system_br": {:git, "https://github.com/nerves-project/nerves_system_br.git", "087124d9a01db19c95a4eda379d52d01e8916e81", [branch: "br-2016.11.1-bump"]},
-  "nerves_toolchain_arm_unknown_linux_gnueabihf": {:hex, :nerves_toolchain_arm_unknown_linux_gnueabihf, "0.9.0", "5a1bca8c46776ad24c358ab58800ed470f91a3e294ac6eb8ffda0041954781e1", [:mix], [{:nerves, "~> 0.4.0", [hex: :nerves, optional: false]}, {:nerves_toolchain_ctng, "~> 0.8.0", [hex: :nerves_toolchain_ctng, optional: false]}]},
-  "nerves_toolchain_ctng": {:hex, :nerves_toolchain_ctng, "0.8.0", "6dff7ed51e1711c5f4da3d559bc528a8265e3dd950dda95f4d6832aed9dbe320", [:mix], []}}
+%{"distillery": {:hex, :distillery, "1.3.1", "211231af29ea55c79143d601a2caaf5936cc7b99e73bef25d78a0ff7f321b7fe", [:mix], []},
+  "nerves": {:hex, :nerves, "0.5.1", "a55d73752e8f271c7aca5fbe47747f07d0e7760b5e858e7f8da17ab06287f49c", [:mix], [{:distillery, "~> 1.0", [hex: :distillery, optional: false]}]},
+  "nerves_system_br": {:hex, :nerves_system_br, "0.10.0", "4814978652b12b49e50100500542e2dc06ffa42e719672ed943e2c6ad82dd6c7", [:mix], []},
+  "nerves_toolchain_arm_unknown_linux_gnueabihf": {:hex, :nerves_toolchain_arm_unknown_linux_gnueabihf, "0.10.0", "18200c6cc3fcda1cbe263b7f7d50ff05db495b881ade9436cd1667b3e8e62429", [:mix], [{:nerves, "~> 0.4", [hex: :nerves, optional: false]}, {:nerves_toolchain_ctng, "~> 0.9", [hex: :nerves_toolchain_ctng, optional: false]}]},
+  "nerves_toolchain_ctng": {:hex, :nerves_toolchain_ctng, "0.9.0", "825b2b5bbacc3ad20c8513baafd44978616d5b451e6e052cdb727be81e7cdcac", [:mix], []}}

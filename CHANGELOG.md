@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.11.1-dev
+
+## v0.11.0
+
+  * New Features
+    * Support for Nerves 0.5.0
+
 ## v0.10.0
 
 This version switches to using the `nerves_package` compiler. This will

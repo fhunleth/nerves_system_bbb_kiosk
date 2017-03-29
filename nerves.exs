@@ -19,14 +19,15 @@ config pkg, :nerves_env,
     defconfig: "nerves_defconfig",
   ],
   checksum: [
+    "nerves_defconfig",
+    "rootfs-additions",
     "linux",
+    "fwup.conf",
     "rootfs-additions",
     "uboot",
     "bbb-busybox.config",
-    "fwup.conf",
-    "nerves_defconfig",
     "nerves.exs",
-    "post-createfs.sh",
     "uboot-script.cmd",
+    "post-createfs.sh",
     "VERSION"
   ]
